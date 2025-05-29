@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up Free Account</title>
+  <!-- Google Font for the heading -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+  <!-- Font-Awesome for the eye icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #f5f5f2;
+      font-family: sans-serif;
+      color: #333;
+      padding: 2rem;
+    }
+    .signup-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    /* Fancy heading with lines */
+    .signup-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-style: italic;
+      text-align: center;
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    .signup-title::before,
+    .signup-title::after {
+      content: "";
+      height: 1px;
+      background: #333;
+      width: 25%;
+      position: absolute;
+      top: 50%;
+    }
+    .signup-title::before { left: 0; }
+    .signup-title::after { right: 0; }
+
+    form label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      font-weight: 500;
+    }
+    form label.required::after {
+      content: " *";
+      color: red;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"] {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 1rem;
+    }
+    /* password field wrapper */
+    .password-wrapper {
+      position: relative;
+    }
+    .password-wrapper .toggle-visibility {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #666;
+    }
+
+    form .optional {
+      font-weight: normal;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: -0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .terms {
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    .terms a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+    .terms a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-submit {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      background: #D50000;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    .btn-submit:hover {
+      background: #b20000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signup-container">
+    <div class="signup-title">sign up free account</div>
+    <form>
+      <label for="company" class="required">Company Name</label>
+      <input type="text" id="company" name="company" required>
+
+      <label for="email" class="required">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password" class="required">Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" name="password" required>
+        <i class="fa-solid fa-eye toggle-visibility" id="togglePassword"></i>
+      </div>
+
+      <label for="phone">Phone number <span class="optional">(Optional)</span></label>
+      <input type="text" id="phone" name="phone">
+
+      <div class="terms">
+        <label>
+          <input type="checkbox" required>
+          I agree to the
+          <a href="#">Terms of Service</a> and
+          <a href="#">Privacy Policy</a>.
+        </label>
+      </div>
+
+      <button type="submit" class="btn-submit">Sign Up for Free</button>
+    </form>
+  </div>
+
+  <script>
+    // Toggle password visibility
+    const toggle = document.getElementById('togglePassword');
+    const pwd = document.getElementById('password');
+    toggle.addEventListener('click', () => {
+      const type = pwd.getAttribute('type') === 'password' ? 'text' : 'password';
+      pwd.
+      setAttribute('type', type);
+      toggle.classList.toggle('fa-eye-slash');
+    });
+  </script>
+  <a href="file:///C:/Users/Student%2025/Desktop/Ah%20jo/h3.html">
+
+</body>
+</html>
